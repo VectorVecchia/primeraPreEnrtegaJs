@@ -111,6 +111,6 @@ let numElegido = +prompt('Cuántos intentos quieres Realizar del 1 - 10?')
     alert('Número de intentos Incorrectos!');
  }
 
-alert('CONTINUARÁ...')
+alert('CONTINUARÁ...');
 
 
