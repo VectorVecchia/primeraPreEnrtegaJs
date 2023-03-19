@@ -6,15 +6,21 @@ let life = 100;
 let attack = 30;
 let weedleLife = 100;
 let weedleAttack= 15;
+let pokemones = ['Squirtle',' Metapod',' Pidgey',' Ekans',' Sandshrew',' Nidorino',' Raticate',' Pidgeot',' Wigglytuff',' Beedrill'];
 
+let pokemons = {
+    tipo: 'Fuego',
+    ataque: 43,
+    nombre: 'Pidgeotto'
+};
 
 if (pokemon1 === 1) {
     pokemon1 = 'Pikachu';
     alert(pokemon1 + " Yo te elijo!!!");
     alert("Derrota al Enemigo ! !");
-    
+
     let firstAttack = +prompt("Elige un ataque: 1: Impactrueno  2: Gruñido  3: Ataque Rápido");
-    
+
     switch (firstAttack) {
         case 1: alert('Pikachu usa Impactrueno')
             break;
@@ -79,16 +85,32 @@ function atacar() {
         alert(pokemon1+ ' Ataca causando ' + attack + ' de daño!');
         weedleLife = weedleLife - attack;
         alert('La vida de Weedle es :' + weedleLife);
-       
-        // if (charizardLife <0){
-        //     break;
-        // }
+
+
 
     } while (weedleLife > 0);
-     
+
     alert('Weedle Derrotado');
-    alert('Fin del juego !');
+
 }
 
+alert ('Aparecen Pokemones Salvajes ! Capturalos..');
+alert (pokemones + ': Han aparecido');
+let numElegido = +prompt('Cuántos intentos quieres Realizar del 1 - 10?')
+ if (numElegido >1 && numElegido<10 ) {
+    for (let i = 0; i < numElegido; i++) {
+    const capturados=pokemones[i];
+
+    // FUNCION POKEMON ALEATORIO SE ESCAPA
+
+    pokemones=pokemones.sort(()=>{return Math.random()-0.5})
+    alert(capturados + ' Capturado!');
+    alert(pokemones[i] + ' Se escapó!')
+}
+ } else {
+    alert('Número de intentos Incorrectos!');
+ }
+
+alert('CONTINUARÁ...')
 
 
